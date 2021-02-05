@@ -32,11 +32,18 @@
         collapsed class -->
         <nav id="mobile-nav" class="mobile-nav collapsed">
             <ul>
-                {{- range .Site.Data.menu }}
+                {{ range .Site.Data.menu }}
                 <li>
-                    <a href='{{ absURL .url }}'>{{ .item }}</a>
+                    <a href='{{ absURL .url }}' class='nav-item'>{{ .item }}</a>
+                    {{ with .subitems }}
+                        <ul>
+                            {{ range .}}
+			                <li><a href="{{ absURL .url }}" class="{{ if ne .external true }}nav-item{{ end }}">{{ .item }}</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
                 </li>
-                {{- end }}
+                {{ end }}
             </ul>
         </nav>
     </div>
