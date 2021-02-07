@@ -5,6 +5,11 @@
       <p class = 'post_date pale'>{{ $date }}</p>
       <h1 class = 'post_title'>{{ .Title }}</h1>
       <p class = 'pale'>{{ with .Params.Author }}by {{ . | markdownify }} | {{end}} {{ .WordCount }} words | ~{{.ReadingTime}} min read</p>
+      <p>
+        {{- range $index, $tag := .Params.tags }}
+          <a class="post_tag" href='{{ "tags/" | relLangURL }}{{ $tag | urlize | lower }}/'>{{ $tag | lower }}</a>
+        {{- end }}
+      </p>
       <div class = 'post_body'>
         <div class = 'post_inner'>
         {{ with .Params.image }}
