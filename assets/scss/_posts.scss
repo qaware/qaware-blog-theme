@@ -281,9 +281,9 @@
 }
 
 .archive {
-  &_item {
+  &_item_summary {
     display: grid;
-    padding: 1.5rem 0;
+    padding: 0 0 1.5rem 0;
   }
 }
 
