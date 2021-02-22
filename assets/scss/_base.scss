@@ -123,7 +123,10 @@ ul{
 li {
   padding-bottom: 5px;
 }
-b, strong, em {
+b, strong {
+  font-weight: 700;
+}
+em {
   font-weight: 500;
 }
 hr {
@@ -168,5 +171,6 @@ figcaption p {
   font-size: 13px !important;
 }
 figure img  {
-  margin: 0px 0px 0px 0px !important;
+  margin-bottom: 5px !important;
+  text-align: center !important;
 }
