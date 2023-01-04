@@ -159,6 +159,17 @@
   }
 }
 
+.spoiler {
+  border: dashed var(--theme) 0.2rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+
+  code {
+    white-space: pre;
+  }
+}
+
 .share {
   margin-left: 8px;
   position: relative;
@@ -248,7 +259,7 @@
     flex-direction: column;
   }
   a {
-    color:var(--theme);
+    color: var(--theme-secondary);
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     &:hover {

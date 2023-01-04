@@ -1,0 +1,13 @@
+<!--
+    Hugo shortcode used to create collapsable boxes with HTML content
+-->
+
+<details 
+    class="spoiler"
+    >
+
+    <summary>{{ .Get "title" }}</summary>
+
+    {{.Inner}}
+
+</details>

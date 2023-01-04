@@ -10,7 +10,11 @@
   h2 {
     position: relative;
     padding-right: 32px;
-    margin: 0.5rem auto;
+  }
+
+  h3, h4 {
+    text-align: left;
+    padding: 5px 0 0 0;
   }
 
   img:not(.icon) {
@@ -19,12 +23,6 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  h3, h4 {
-    margin: 0.5rem auto;
-    text-align: left;
-    padding: 5px 0 0 0;
   }
 
   p {
@@ -62,7 +60,7 @@
     margin-right: auto;
 
     a {
-      color: var(--theme);
+      color: var(--theme-secondary);
       transition: all 0.3s;
 
       &:hover {
@@ -71,13 +69,12 @@
       }
     }
 
+    h1, h2, h3, h4 {
+      margin: 1.75rem auto 0.5rem auto;
+    }
+
     img:not(.icon) {
       margin-bottom: 2rem;
-
-      ~ h1, ~ h2, ~ h3, ~ h4 {
-        margin-top: 0;
-        padding-top: 0;
-      }
     }
   }
 
@@ -138,7 +135,7 @@
 
     a {
       &:hover {
-        color: var(--theme);
+        color: var(--theme-secondary);
         text-decoration: underline;
         opacity: 0.9;
       }
