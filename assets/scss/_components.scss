@@ -259,7 +259,7 @@
     flex-direction: column;
   }
   a {
-    color:var(--theme);
+    color: var(--theme-secondary);
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     &:hover {

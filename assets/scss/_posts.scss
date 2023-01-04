@@ -62,7 +62,7 @@
     margin-right: auto;
 
     a {
-      color: var(--theme);
+      color: var(--theme-secondary);
       transition: all 0.3s;
 
       &:hover {
@@ -138,7 +138,7 @@
 
     a {
       &:hover {
-        color: var(--theme);
+        color: var(--theme-secondary);
         text-decoration: underline;
         opacity: 0.9;
       }
