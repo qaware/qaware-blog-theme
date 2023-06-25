@@ -1,0 +1,20 @@
+{{- $static := .Get "static" }}
+{{- $anim := .Get "anim" }}
+
+<!-- This short code allows to flip an image to another when clicked on it. E. g. from a static image with play button to an animated one -->
+
+<style>
+  .animated:hover { cursor: pointer; }
+</style>
+
+<img src='{{ $static }}' onclick='flipAnimation(this, "{{ $static }}", "{{ $anim }}")' class='animated'>
+
+<script>
+  function flipAnimation(img, flip1, flip2) {
+    if (img.src.endsWith(flip2)) {
+      img.src = flip1;
+    } else {
+      img.src = flip2;
+    }
+  }
+</script>
