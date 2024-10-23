@@ -2,3 +2,4 @@ exampleSite/public
 docs
 .DS_Store
 *.swp
+.idea/
