@@ -1,7 +1,7 @@
 <head>
   <title>{{if ne .Page.Title .Site.Title }}{{ with .Title }}{{ . }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
   <meta charset='utf-8'>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.cookiebot.com/ https://*.googletagmanager.com/" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: https://*.cookiebot.eu/ https://*.usercentrics.eu/ https://*.googletagmanager.com/" />
   {{- with .Site.Params.ga_verify }}
   <meta name="google-site-verification" content="{{ . }}" />
   {{- end }}
@@ -24,6 +24,6 @@
   {{ end -}}
 
   {{- with .Site.Params.cookiebot }}
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="{{ . }}" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.eu/uc.js" data-cbid="{{ . }}" data-blockingmode="auto" type="text/javascript"></script>
   {{ end -}}
 </head>
