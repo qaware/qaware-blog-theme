@@ -1,7 +1,7 @@
 <head>
   <title>{{if ne .Page.Title .Site.Title }}{{ with .Title }}{{ . }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
   <meta charset='utf-8'>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.cookiebot.com/; script-src 'self' https://*.googletagmanager.com/" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.cookiebot.com/ https://*.googletagmanager.com/" />
   {{- with .Site.Params.ga_verify }}
   <meta name="google-site-verification" content="{{ . }}" />
   {{- end }}
